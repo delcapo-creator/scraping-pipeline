@@ -1,5 +1,6 @@
 requests>=2.31
 beautifulsoup4>=4.12
 lxml>=4.9
+openpyxl>=3.1
 # optional, only for --mode browser:
 # playwright>=1.40

@@ -44,6 +44,14 @@ BOOK_RULES = [
     Rule("price_incl_tax", "range", (0.01, 10_000)), Rule("rating", "range", (1, 5)),
     Rule("in_stock", "range", (0, 100_000)), Rule("url", "required"),
 ]
+HOCKEY_RULES = [
+    Rule("team", "required"), Rule("year", "range", (1900, 2100)), Rule("wins", "range", (0, 100)),
+    Rule("losses", "range", (0, 100)), Rule("win_pct", "range", (0.0, 1.0)),
+]
+COUNTRY_RULES = [
+    Rule("name", "required"), Rule("population", "range", (0, 2_000_000_000)),
+    Rule("area_km2", "range", (0, 20_000_000)),
+]
 QUOTE_RULES = [Rule("text", "required"), Rule("author", "required"), Rule("tags", "type", list)]
 
 

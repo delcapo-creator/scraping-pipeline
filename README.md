@@ -13,8 +13,8 @@ A polite, validated web scraping pipeline in Python. It collects structured data
 | Global rate limit shared by all threads, robots.txt check | `http.py` |
 | Disk cache so re-runs do not hit the site again | `http.py` |
 | Data validation: required fields, ranges, types, duplicates, empty-field rates | `validate.py` |
-| Export to CSV (Excel-friendly), JSON and SQLite | `export.py` |
-| 23 offline tests (saved HTML fixtures + local HTTP server) | `tests/` |
+| Export to Excel (.xlsx, locale-proof), CSV, JSON and SQLite | `export.py` |
+| 31 offline tests (saved HTML fixtures + local HTTP server) | `tests/` |
 
 ## Quick start
 
@@ -53,7 +53,7 @@ Use `--strict` in scheduled jobs: the exit code becomes 2 when validation fails,
 | `--max-pages N` | all | stop after N listing pages |
 | `--workers N` | 4 | parallel detail-page downloads (books) |
 | `--delay S` | 0.5 | minimum seconds between requests, across all threads |
-| `--formats` | csv,json,sqlite | output formats |
+| `--formats` | xlsx,csv,json,sqlite | output formats |
 | `--cache DIR` | .cache | HTML cache; `--cache ""` disables it |
 | `--strict` | off | exit code 2 on validation failure |
 
